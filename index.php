@@ -1,12 +1,10 @@
 <?php
 
-require 'Pokemon.php';
-
-$Pikachu = new Pokemon('Gemiro', 'Electric', '60', 'Electric Ring', 'Pika Punch', 'Fire', 'Fighting');
-$Charmeleon = new Pokemon('Jonna', 'Fire', '60', 'Head Butt', 'Flare', 'Water', 'Lightning');
-
-print_r($Pikachu->Pokemon1());
-print_r($Charmeleon->Pokemon2());
+include 'Pokemon.php';
+include_once 'charmeleon.php';
+$Charmeleon = new Charmeleon();
+$Pikachu = new Pikachu('Pikachu1');
+$Pikachu2 = new Pikachu('Pikachu2');
 
 ?>
 
@@ -27,6 +25,7 @@ print_r($Charmeleon->Pokemon2());
         <img src="charmeleon.png" id="charmeleon" width="150" height="180">
         <button type="button" data-damage="10" data-pokemon="char" class="btn btn-success Attackbtn" id="Charattack1">Head Butt</button>     
         <button type="button" data-damage="30" data-pokemon="char" class="btn btn-warning Attackbtn" id="Charattack2">Flare</button>
+        <input type="text" value="">
 </body>
 <script src="script.js"></script>
 </html>
